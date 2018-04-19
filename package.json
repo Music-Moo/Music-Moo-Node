@@ -1,0 +1,32 @@
+{
+  "name": "music-moo-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Music-Moo/Music-Moo-Node.git"
+  },
+  "author": "Radu-Raicea",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Music-Moo/Music-Moo-Node/issues"
+  },
+  "homepage": "https://github.com/Music-Moo/Music-Moo-Node#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^9.6.6",
+    "nodemon": "^1.17.3",
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.1"
+  }
+}

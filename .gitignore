@@ -57,3 +57,16 @@ typings/
 # dotenv environment variables file
 .env
 
+client_secret.json
+credentials.json
+drive_credentials.json
+youtube_credentials.json
+*.mp4
+*.mp3
+*.webm
+*.m4a
+*.tmp
+.DS_Store
+settings.json
+test.py
+dist/
