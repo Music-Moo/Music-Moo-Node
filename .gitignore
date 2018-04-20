@@ -70,3 +70,4 @@ youtube_credentials.json
 settings.json
 test.py
 dist/
+lib/
