@@ -1,6 +1,6 @@
 import * as bodyParser from 'body-parser'
 import * as express from 'express';
-import { download } from './download'
+import { downloadTrack, downloadPlaylist } from './download'
 
 class App {
   public express
@@ -20,9 +20,11 @@ class App {
     })
 
     router.post('/download', (req, res) => {
-      let urls = req.body.urls
-      for (let url of urls) download(url)
-      res.send('Download has started!')
+      let body = req.body
+      if (!('urls' in body) && !('playlist' in body)) res.send('Invalid request.')
+      if ('urls' in body) for (let url of body.urls) downloadTrack(url)
+      if ('playlist' in body) downloadPlaylist(body.playlist)
+      res.send('Download request processed!')
     })
 
     this.express.use('/', router)
